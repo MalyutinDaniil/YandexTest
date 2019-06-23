@@ -9,7 +9,7 @@ public class SentEmails {
 
 
     @FindBy(css = "a.fid-4")
-    private WebElement SentEmaisButton;
+    private WebElement sentEmaisButton;
 
 
     public SentEmails(WebDriver driver) {
@@ -17,7 +17,7 @@ public class SentEmails {
     }
 
     public void checkSentEmails(String Theme) {
-        this.SentEmaisButton.click();
+        this.sentEmaisButton.click();
         driver.findElement(By.xpath("//span[text()='" + Theme + "']"));
 
 

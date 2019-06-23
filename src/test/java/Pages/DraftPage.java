@@ -10,7 +10,7 @@ public class DraftPage {
     private WebDriver driver;
 
     @FindBy(css = "a.fid-6")
-    private WebElement DraftEmaisButton;
+    private WebElement draftEmaisButton;
 
 
     public DraftPage(WebDriver driver) {
@@ -18,7 +18,7 @@ public class DraftPage {
     }
 
     public void checkSentEmails(String Theme) {
-        this.DraftEmaisButton.click();
+        this.draftEmaisButton.click();
         driver.findElement(By.xpath("//span[text()='" + Theme + "']"));
 
     }
