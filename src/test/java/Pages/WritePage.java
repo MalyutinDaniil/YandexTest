@@ -24,30 +24,25 @@ public class WritePage {
     private WebElement Subject;
 
 
-    @FindBy(css =  "button.js-send-button")
+    @FindBy(css = "button.js-send-button")
     private WebElement SendButton;
 
-    @FindBy(css ="div.mail-Done-Title" )
+    @FindBy(css = "div.mail-Done-Title")
     private WebElement Sent;
 
-    @FindBy(css = "div.ns-view-compose-cancel-button" )
+    @FindBy(css = "div.ns-view-compose-cancel-button")
     private WebElement Close;
 
     @FindBy(css = "button._nb-small-action-button")
     private WebElement CloseAndSaveButton;
 
 
-
-
-
-
-
-    public WritePage (WebDriver driver){
-        this.driver=driver;
-        wait = new WebDriverWait(driver,10);
+    public WritePage(WebDriver driver) {
+        this.driver = driver;
+        wait = new WebDriverWait(driver, 10);
     }
 
-    public void  writeEmail (String To, String Theme, String Text) {
+    public void writeEmail(String To, String Theme, String Text) {
         this.NewEmail.click();
 
         this.To.sendKeys(To);
@@ -58,20 +53,18 @@ public class WritePage {
 
     }
 
-    public  void sendEmail(){
+    public void sendEmail() {
         SendButton.click();
         wait.until(ExpectedConditions.visibilityOf(Sent));
 
     }
 
-    public  void savedEmail(){
+    public void savedEmail() {
         Close.click();
         CloseAndSaveButton.click();
 
 
     }
-
-
 
 
 }
