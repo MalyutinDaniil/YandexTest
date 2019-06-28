@@ -33,7 +33,7 @@ public class Tests {
         LOGIN = settings.LOGIN;
         PASSWORD = settings.PASSWORD;
         TO = settings.TO;
-        System.setProperty("webdriver.chrome.driver", "src\\resoursec\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src\\resouces\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

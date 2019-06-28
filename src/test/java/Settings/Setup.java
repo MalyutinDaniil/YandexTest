@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class Setup {
 
-    public String PATH_TO_PROPERTIES = "src\\resoursec\\config.properties";
+    public String PATH_TO_PROPERTIES = "src\\resouces\\config.properties";
     public String LOGIN;
     public String PASSWORD;
     public String TO;
