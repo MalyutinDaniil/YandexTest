@@ -30,6 +30,10 @@ public class Setup {
             e.printStackTrace();
 
         }
+        if (LOGIN.length()  < PASSWORD.length() | TO.length() == 0)
+        {
+            throw new Error("Не заполнены переменные в config.properties");
+        }
     }
 
 

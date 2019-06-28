@@ -39,7 +39,6 @@ public class WritePage {
 
     public WritePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, 10);
     }
 
     public void writeEmail(String To, String Theme, String Text) {
