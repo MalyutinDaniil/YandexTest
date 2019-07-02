@@ -23,7 +23,7 @@ public class Tests {
     String PASSWORD;
     String TO;
     String THEME = UUID.randomUUID().toString();
-    String BODDY = "Письмо";
+    String BODY = "Письмо";
 
 
     @BeforeMethod
@@ -52,7 +52,7 @@ public class Tests {
         HomePage home = PageFactory.initElements(driver, HomePage.class);
         home.LogIn(LOGIN, PASSWORD);
         WritePage writePage = PageFactory.initElements(driver, WritePage.class);
-        writePage.writeEmail(TO, THEME, BODDY);
+        writePage.writeEmail(TO, THEME, BODY);
         writePage.sendEmail();
         SentEmails SentEmails = PageFactory.initElements(driver, SentEmails.class);
         SentEmails.checkSentEmails(THEME);
@@ -67,7 +67,7 @@ public class Tests {
         HomePage home = PageFactory.initElements(driver, HomePage.class);
         home.LogIn(LOGIN, PASSWORD);
         WritePage writePage = PageFactory.initElements(driver, WritePage.class);
-        writePage.writeEmail(TO, THEME, BODDY);
+        writePage.writeEmail(TO, THEME, BODY);
         writePage.savedEmail();
         DraftPage DraftPage = PageFactory.initElements(driver, DraftPage.class);
         DraftPage.checkSentEmails(THEME);
