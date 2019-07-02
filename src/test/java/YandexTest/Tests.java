@@ -54,8 +54,8 @@ public class Tests {
         WritePage writePage = PageFactory.initElements(driver, WritePage.class);
         writePage.writeEmail(TO, THEME, BODY);
         writePage.sendEmail();
-        SentEmails SentEmails = PageFactory.initElements(driver, SentEmails.class);
-        SentEmails.checkSentEmails(THEME);
+        SentEmails sentEmails = PageFactory.initElements(driver, SentEmails.class);
+        sentEmails.checkSentEmails(THEME);
 
     }
 

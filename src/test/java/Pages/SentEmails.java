@@ -19,7 +19,5 @@ public class SentEmails {
     public void checkSentEmails(String Theme) {
         this.sentEmaisButton.click();
         driver.findElement(By.xpath("//span[text()='" + Theme + "']"));
-
-
     }
 }
